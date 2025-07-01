@@ -8,6 +8,9 @@ export default function Hero() {
                 <p className="text-gray-500">
                     Full Stack Developer crafting modern web apps
                 </p>
+                <p className="text-red-500">
+                    (under development)
+                </p>
             </div>
         </section>
     )
