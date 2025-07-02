@@ -1,4 +1,4 @@
-const ProjectsLayout = () => {
+export default function Projects()  {
     return (
         <div className="min-h-screen bg-white text-black">
             <h1 className="text-3xl font-light mb-12 tracking white">
