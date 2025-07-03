@@ -1,16 +1,47 @@
 export default function Hero() {
     return (
-        <section id="home" className="min-h-screen bg-gray-50 flex items-center justify-center">
-            <div className="text-center">
-                <h1 className="text-3xl font-bold text-gray-600">
-                    Hi, this is Dev
-                </h1>
-                <p className="text-gray-500">
-                    Full Stack Developer crafting modern web apps
-                </p>
-                <p className="text-red-500">
-                    (under development)
-                </p>
+        <section id="home" className="min-h-screen bg-gray-50 flex items-center justify-center px-8">
+            <div className="max-w-4xl w-full flex items-center gap-16">
+                {/*Photo*/}
+                {/* <div className="flex-shrink-0">
+                    <div className="w-64 h-64 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
+                        <img 
+                            src="./dev-photo.png" 
+                            alt="Profile"
+                            className="w-full h-full object-cover" 
+                        />
+                    </div>
+                </div> */}
+
+                {/* About section */}
+                <div className="space-y-4">
+                    {/* <div>
+                        <h1 className="text-4xl text-gray-900 mb-2">
+                            Hi, I'm Dev.
+                        </h1>
+                    </div> */}
+
+                    <p className="text-gray-600">
+                        Hi, I'm Dev, 20, based in India.
+                    </p>
+                    
+                    <p className="text-gray-600">
+                        I am a full stack web-developer who builds modern web-apps and is destined to greatness because I am 
+                        tired of living in this loop of mediocrity and hence fighting my way out of it.
+                    </p>
+                    <p className="text-gray-600">
+                        In my free time, I like to watch sports and it's related documentaries, or sitcoms.
+                    </p>
+                    
+                    <div className="pt-4">
+                        <a 
+                            href=""
+                            className="px-6 py-2 bg-gray-700 text-white hover:bg-gray-800 transition-colors rounded-lg"
+                        >
+                            Get in Touch
+                        </a>
+                    </div>
+                </div>
             </div>
         </section>
     )
