@@ -1,7 +1,7 @@
 export default function Hero() {
     return (
         <section id="home" className="min-h-screen bg-gray-50 flex items-center justify-center px-8">
-            <div className="max-w-4xl w-full flex items-center gap-16">
+            <div className="max-w-4xl w-full flex items-center gap-16 px-10">
                 {/*Photo*/}
                 {/* <div className="flex-shrink-0">
                     <div className="w-64 h-64 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
@@ -14,7 +14,7 @@ export default function Hero() {
                 </div> */}
 
                 {/* About section */}
-                <div className="space-y-4">
+                <div className="space-y-4 px-10">
                     {/* <div>
                         <h1 className="text-4xl text-gray-900 mb-2">
                             Hi, I'm Dev.
