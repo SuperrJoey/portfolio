@@ -15,34 +15,34 @@ export const projects: Project[] = [
     {
         id: "project-1",
         title: "MemoCare",
-        description: "A web-application to assist users with memory challenges in tracking and receiving personal memories and information with Web Speech API for voice recognition, hands-free",
-        image: " ",
-        techStack: [" "],
+        description: "A web-application to assist users with memory challenges in tracking and receiving personal memories and information with Web Speech API for voice recognition, hands-free interaction.",
+        image: "/memocare-demo.png",
+        techStack: ["React", "TypeScript", "Web Speech API", "Tailwind CSS", "Vercel"],
         links: {
-            live: "",
-            github: ""
+            live: "https://memocare-two.vercel.app/",
+            github: "https://github.com/SuperrJoey/memocare"
         }
     },
     {
         id: "project-2",
         title: "DevTerrain",
-        description: "Turn your GitHub contributions into lively 3D Landscapes",
-        image: "",
-        techStack: [""],
+        description: "Transform your GitHub contributions into stunning 3D landscapes. Visualize your coding journey through interactive terrain generated from your commit history.",
+        image: "/dev-terrain-demo.png",
+        techStack: ["Next.js", "Three.js", "TypeScript", "GitHub API", "Tailwind CSS"],
         links: {
-            live: "",
-            github: ""
+            live: "https://dev-terrain.vercel.app/",
+            github: "https://github.com/SuperrJoey/DevTerrain"
         }
     },
     {
         id: "project-3",
         title: "CineFlix",
-        description: "A full stack web-app designed to manage theatre bookings",
-        image: "",
-        techStack: [""],
+        description: "A comprehensive full-stack web application designed to manage theatre bookings with user authentication, seat selection, and payment processing.",
+        image: "/cine-fliix-demo.png",
+        techStack: ["React", "Node.js", "Express", "MongoDB", "JWT", "Stripe"],
         links: {
-            live: "",
-            github: ""
+            live: "https://cine-flix-inky.vercel.app/",
+            github: "https://github.com/SuperrJoey/CineFlix"
         }
     },
 ]
