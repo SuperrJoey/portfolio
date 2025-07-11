@@ -1,7 +1,10 @@
+import ScrollingSkills from './ScrollingSkills';
+
 export default function Hero() {
     return (
-        <section id="home" className="min-h-screen bg-gray-50 flex items-center justify-center px-8">
-            <div className="max-w-4xl w-full flex items-center gap-16 px-10">
+        <section id="home" className="min-h-screen bg-gray-50 flex flex-col justify-center px-8">
+            {/* Main content */}
+            <div className="max-w-4xl w-full mx-auto flex items-center gap-16 px-10 flex-1">
                 {/*Photo*/}
                 {/* <div className="flex-shrink-0">
                     <div className="w-64 h-64 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
@@ -42,6 +45,11 @@ export default function Hero() {
                         </a>
                     </div>
                 </div>
+            </div>
+
+            {/* Scrolling Skills Animation */}
+            <div className="w-full max-w-6xl mx-auto mb-8">
+                <ScrollingSkills />
             </div>
         </section>
     )
