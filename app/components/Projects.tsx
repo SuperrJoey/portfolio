@@ -1,13 +1,29 @@
 'use client'
+import { useState } from 'react';
 import { projects } from '../data/projects';
 
 export default function Projects() {
+    const [formData, setFormData] = useState({
+        email: '',
+        message: ''
+    });
+
+    const [isSubmitting, setIsSubmitting] = useState(false);
+
+    const handleSubmit = async (e: React.FormEvent) => {
+        e.preventDefault();
+        setIsSubmitting(true);
+
+        try {
+        }
+    }
+
     return (
         <section id="projects" className="min-h-screen bg-white py-20 px-8">
             <div className="max-w-6xl mx-auto">
                 {/* Section Header */}
                 <div className="text-center mb-16">
-                    <h2 className="text-4xl font-light text-gray-900 mb-4 tracking-wide">
+                    <h2 className="text-4xl font-medium text-gray-900 mb-4 tracking-wide">
                         Projects
                     </h2>
                     <p className="text-gray-600 max-w-2xl mx-auto">
@@ -109,20 +125,61 @@ export default function Projects() {
                     ))}
                 </div>
 
-                {/* Call to Action */}
-                <div className="text-center mt-16">
-                    <p className="text-gray-600 mb-6">
-                        Interested in collaborating or learning more about my work?
-                    </p>
-                    <a
-                        href="#contact"
-                        className="inline-flex items-center gap-2 px-6 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors"
-                    >
-                        Get in Touch
-                        <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                        </svg>
-                    </a>
+                <div>
+                    <div>
+                        <h3>
+                            Get in Touch
+                        </h3>
+                        <p>
+                            Interested in collaborating? Send me a message and I'll get back to you soon.
+                        </p>
+
+                        <form
+                            onSubmit={handleSubmit}
+                            className='space-y-6'
+                            >
+                                <div>
+                                    <label htmlFor="email" className='block text-sm font-medium text-gray-700 mb-2'>
+                                        Your Email
+                                    </label>
+                                    <input 
+                                        type="text"
+                                        id='email'
+                                        name='email'
+                                        value={FormData.email}
+                                        onChange={handleChange}
+                                        required
+                                        className='w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent outline-none transition-all'
+                                        placeholder='johndoe@example.com'
+                                    />
+
+<div>
+                            <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                                Message
+                            </label>
+                            <textarea
+                                id="message"
+                                name="message"
+                                value={formData.message}
+                                onChange={handleChange}
+                                required
+                                rows={5}
+                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-500 focus:border-transparent outline-none transition-all resize-vertical"
+                                placeholder="Tell me about your project or just say hello..."
+                            />
+                        </div>
+
+                        <div className="text-center">
+                            <button
+                                type="submit"
+                                disabled={isSubmitting}
+                                className="px-8 py-3 bg-gray-700 text-white rounded-lg hover:bg-gray-800 transition-colors disabled:opacity-50 disabled:cursor-not-allowed"
+                            >
+                                {isSubmitting ? 'Sending...' : 'Send Message'}
+                            </button>
+                                </div>
+                            </form>
+                    </div>
                 </div>
             </div>
         </section>

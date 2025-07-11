@@ -2,28 +2,30 @@ import ScrollingSkills from './ScrollingSkills';
 
 export default function Hero() {
     return (
-        <section id="home" className="min-h-screen bg-gray-50 flex flex-col justify-center px-8">
+        <section id="home" className="min-h-[85vh] bg-gray-50 flex flex-col justify-center px-8 pt-16">
             {/* Main content */}
             <div className="max-w-4xl w-full mx-auto flex items-center gap-16 px-10 flex-1">
                 {/*Photo*/}
-                {/* <div className="flex-shrink-0">
-                    <div className="w-64 h-64 rounded-full overflow-hidden bg-gray-100 border border-gray-200">
-                        <img 
-                            src="./dev-photo.png" 
-                            alt="Profile"
-                            className="w-full h-full object-cover" 
-                        />
+                <div className="flex-shrink-0">
+                    <div className="relative w-64 h-64 group">
+                        {/* Gradient background */}
+                        <div className="absolute inset-0 bg-gradient-to-br from-blue-400 via-purple-500 to-pink-500 rounded-full blur-sm opacity-75 group-hover:opacity-100 transition-opacity duration-300"></div>
+                        {/* Image container */}
+                        <div className="relative w-full h-full rounded-full overflow-hidden bg-white p-1">
+                            <img 
+                                src="/dev-photo.png" 
+                                alt="Dev - Full Stack Developer"
+                                className="w-full h-full object-cover rounded-full hover:scale-105 transition-transform duration-300" 
+                            />
+                        </div>
+                        {/* Floating elements for creativity */}
+                        <div className="absolute -top-2 -right-2 w-4 h-4 bg-blue-500 rounded-full animate-pulse"></div>
+                        <div className="absolute -bottom-1 -left-1 w-3 h-3 bg-purple-500 rounded-full animate-pulse delay-75"></div>
                     </div>
-                </div> */}
+                </div>
 
                 {/* About section */}
                 <div className="space-y-4 px-10">
-                    {/* <div>
-                        <h1 className="text-4xl text-gray-900 mb-2">
-                            Hi, I'm Dev.
-                        </h1>
-                    </div> */}
-
                     <p className="text-gray-600">
                         Hi, I'm Dev, 20, based in India.
                     </p>
@@ -35,15 +37,6 @@ export default function Hero() {
                     <p className="text-gray-600">
                         In my free time, I like to watch sports and it's related documentaries, or sitcoms.
                     </p>
-                    
-                    <div className="pt-4">
-                        <a 
-                            href=""
-                            className="px-6 py-2 bg-gray-700 text-white hover:bg-gray-800 transition-colors rounded-lg"
-                        >
-                            Get in Touch
-                        </a>
-                    </div>
                 </div>
             </div>
 
