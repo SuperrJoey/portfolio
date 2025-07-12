@@ -2,7 +2,7 @@ import ScrollingSkills from './ScrollingSkills';
 
 export default function Hero() {
     return (
-        <section id="home" className="min-h-[85vh] bg-gradient-to-br from-gray-900 via-gray-800 to-black flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 relative overflow-hidden">
+        <section id="home" className="min-h-[85vh] bg-gray-900 flex flex-col justify-center px-4 sm:px-6 lg:px-8 pt-8 sm:pt-12 lg:pt-16 relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.05]">
                 <div className="absolute inset-0" style={{

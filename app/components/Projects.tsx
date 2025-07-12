@@ -44,7 +44,7 @@ export default function Projects() {
     };
 
     return (
-        <section id="projects" className="min-h-screen bg-gradient-to-br from-black via-gray-900 to-gray-800 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
+        <section id="projects" className="min-h-screen bg-gray-900 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
             {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03]">
                 <div className="absolute inset-0" style={{
