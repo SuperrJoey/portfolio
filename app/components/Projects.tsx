@@ -29,7 +29,7 @@ export default function Projects() {
             } else {
                 alert('Failed to send message. Please try again')
             } 
-        } catch (e) {
+        } catch {
             alert('Failed to send message. Please try again');
         } finally {
             setIsSubmitting(false);
@@ -45,7 +45,6 @@ export default function Projects() {
 
     return (
         <section id="projects" className="min-h-screen bg-gray-900 py-12 sm:py-16 lg:py-20 px-4 sm:px-6 lg:px-8 relative overflow-hidden">
-            {/* Background Pattern */}
             <div className="absolute inset-0 opacity-[0.03]">
                 <div className="absolute inset-0" style={{
                     backgroundImage: `radial-gradient(circle at 80% 20%, #3b82f6 0%, transparent 50%), radial-gradient(circle at 20% 80%, #8b5cf6 0%, transparent 50%)`,
@@ -54,7 +53,6 @@ export default function Projects() {
             </div>
 
             <div className="max-w-6xl mx-auto relative z-10">
-                {/* Section Header */}
                 <div className="text-center mb-12 sm:mb-16">
                     <h2 className="text-3xl sm:text-4xl font-medium text-white mb-3 sm:mb-4 tracking-wide">
                         Projects
@@ -64,8 +62,6 @@ export default function Projects() {
                         and innovative solutions built with modern technologies.
                     </p>
                 </div>
-
-                {/* Projects Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 mb-12 sm:mb-16">
                     {projects.map((project) => (
                         <div
@@ -168,7 +164,7 @@ export default function Projects() {
                                 Get in Touch
                             </h3>
                             <p className="text-gray-300 text-sm sm:text-base">
-                                Interested in collaborating? Send me a message and I'll get back to you soon.
+                                Interested in collaborating? Send me a message and I&apos;ll get back to you soon.
                             </p>
                         </div>
 

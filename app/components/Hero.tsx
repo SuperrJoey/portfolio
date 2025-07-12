@@ -39,14 +39,14 @@ export default function Hero() {
                 {/* About section */}
                 <div className="space-y-4 px-4 sm:px-6 lg:px-10 text-center lg:text-left order-2 lg:order-none">
                     <p className="text-gray-100 text-sm sm:text-base font-medium">
-                        Hi, I'm Dev, 20, based in India.
+                        Hi, I&apos;m Dev, 20, based in India.
                     </p>
                     
                     <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
                         I am a full stack web-developer who builds modern web-apps. I love learning new things, experimenting with them, and always being curious about them
                     </p>
                     <p className="text-gray-300 text-sm sm:text-base">
-                        In my free time, I like to watch sports and it's related documentaries, or sitcoms.
+                        In my free time, I like to watch sports and it&apos;s related documentaries, or sitcoms.
                     </p>
                 </div>
             </div>
