@@ -4,7 +4,7 @@ import Projects from "./components/Projects";
 
 export default function Home() {
   return (
-    <div>
+    <div className="min-h-screen bg-gray-900">
       <Hero />
       <Projects />
       <Footer />

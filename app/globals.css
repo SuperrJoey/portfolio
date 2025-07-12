@@ -2,7 +2,9 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Scrolling Skills Animation */
+html {
+  scroll-behavior: smooth;
+}
 @keyframes scroll-left {
   0% {
     transform: translateX(0);
@@ -22,14 +24,33 @@
 }
 
 .animate-scroll-left {
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
 
 .animate-scroll-right {
-  animation: scroll-right 30s linear infinite;
+  animation: scroll-right 35s linear infinite;
 }
 
 .animate-scroll-left:hover,
 .animate-scroll-right:hover {
   animation-play-state: paused;
+}
+
+
+@supports (backdrop-filter: blur(10px)) {
+  .backdrop-blur-sm {
+    backdrop-filter: blur(4px);
+  }
+}
+
+
+.focus-visible:focus {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+* {
+  transition-property: color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
 }

@@ -18,28 +18,29 @@ interface ScrollingSkillsProps {
 }
 
 export default function ScrollingSkills({ direction = 'left' }: ScrollingSkillsProps) {
-    // Duplicate the skills array to create seamless loop
     const duplicatedSkills = [...skills, ...skills, ...skills];
 
     return (
-        <div className="relative w-full overflow-hidden py-4">
-            {/* Fade overlay gradients */}
-            <div className="absolute left-0 top-0 bottom-0 w-20 bg-gradient-to-r from-gray-50 to-transparent z-10 pointer-events-none" />
-            <div className="absolute right-0 top-0 bottom-0 w-20 bg-gradient-to-l from-gray-50 to-transparent z-10 pointer-events-none" />
-            
-            {/* Scrolling container */}
-            <div className={`flex ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}>
+        <div className="relative w-full overflow-hidden py-2 sm:py-4">
+            {/* Scrolling container with CSS mask for seamless fade */}
+            <div className={`flex ${direction === 'left' ? 'animate-scroll-left' : 'animate-scroll-right'}`}
+                 style={{
+                     maskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)',
+                     WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%)'
+                 }}>
                 {duplicatedSkills.map((skill, index) => (
                     <div
                         key={`${skill.name}-${index}`}
-                        className="flex-shrink-0 mx-4 px-4 py-3 rounded-lg bg-white/90 backdrop-blur-sm border border-gray-200/60 shadow-sm hover:shadow-md transition-all duration-200 flex items-center gap-3 min-w-max"
+                        className="flex-shrink-0 mx-2 sm:mx-4 px-3 sm:px-4 py-2 sm:py-3 rounded-xl bg-gray-800/90 backdrop-blur-sm border border-gray-700/50 shadow-lg hover:shadow-xl hover:bg-gray-700/90 hover:border-blue-500/50 transition-all duration-300 flex items-center gap-2 sm:gap-3 min-w-max group"
                     >
-                        <img 
-                            src={skill.icon} 
-                            alt={skill.name} 
-                            className="w-5 h-5 object-contain" 
-                        />
-                        <span className="text-sm font-medium text-gray-700 whitespace-nowrap">
+                        <div className="flex items-center justify-center w-5 h-5 sm:w-6 sm:h-6 rounded-lg bg-gradient-to-br from-blue-900/50 to-purple-900/50 group-hover:from-blue-800/60 group-hover:to-purple-800/60 transition-all duration-300">
+                            <img 
+                                src={skill.icon} 
+                                alt={skill.name} 
+                                className="w-3 h-3 sm:w-4 sm:h-4 object-contain group-hover:scale-110 transition-transform duration-300" 
+                            />
+                        </div>
+                        <span className="text-xs sm:text-sm font-medium text-gray-200 group-hover:text-blue-300 whitespace-nowrap transition-colors duration-300">
                             {skill.name}
                         </span>
                     </div>
